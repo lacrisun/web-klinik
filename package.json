@@ -1,5 +1,5 @@
 {
-  "name": "mantine-next-template",
+  "name": "web-klinik",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -19,13 +19,33 @@
     "storybook:build": "storybook build"
   },
   "dependencies": {
-    "@mantine/core": "7.12.1",
-    "@mantine/hooks": "7.12.1",
+    "@mantine/carousel": "^7.12.2",
+    "@mantine/charts": "^7.12.2",
+    "@mantine/code-highlight": "^7.12.2",
+    "@mantine/core": "^7.12.2",
+    "@mantine/dates": "^7.12.2",
+    "@mantine/dropzone": "^7.12.2",
+    "@mantine/form": "^7.12.2",
+    "@mantine/hooks": "^7.12.2",
+    "@mantine/modals": "^7.12.2",
+    "@mantine/notifications": "^7.12.2",
+    "@mantine/nprogress": "^7.12.2",
+    "@mantine/spotlight": "^7.12.2",
+    "@mantine/tiptap": "^7.12.2",
+    "@mantinex/mantine-logo": "^1.0.1",
     "@next/bundle-analyzer": "^14.2.4",
-    "@tabler/icons-react": "^3.6.0",
+    "@tabler/icons-react": "^3.14.0",
+    "@tiptap/extension-link": "^2.6.6",
+    "@tiptap/react": "^2.6.6",
+    "@tiptap/starter-kit": "^2.6.6",
+    "@types/testing-library__jest-dom": "^5.14.9",
+    "dayjs": "^1.11.13",
+    "embla-carousel-react": "^7.1.0",
     "next": "14.2.4",
     "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "react-dom": "18.3.1",
+    "recharts": "^2.12.7",
+    "sass": "^1.77.8"
   },
   "devDependencies": {
     "@babel/core": "^7.24.7",
@@ -36,7 +56,7 @@
     "@storybook/nextjs": "^8.1.10",
     "@storybook/react": "^8.1.10",
     "@testing-library/dom": "^10.1.0",
-    "@testing-library/jest-dom": "^6.4.6",
+    "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.0",
     "@testing-library/user-event": "^14.5.2",
     "@types/jest": "^29.5.12",

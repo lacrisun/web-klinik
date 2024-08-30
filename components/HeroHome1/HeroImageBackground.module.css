@@ -1,0 +1,135 @@
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: italic;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/redhatdisplay/v19/8vIS7wUr0m80wwYf0QCXZzYzUoTg-A6tTY_9CQ.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: italic;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/redhatdisplay/v19/8vIS7wUr0m80wwYf0QCXZzYzUoTg-A6jTY8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/redhatdisplay/v19/8vIQ7wUr0m80wwYf0QCXZzYzUoTg8z6hVYs.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/redhatdisplay/v19/8vIQ7wUr0m80wwYf0QCXZzYzUoTg_T6h.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+.wrapper {
+  position: relative;
+  padding-top: rem(180px);
+  padding-bottom: rem(130px);
+  background-image: url(../../public/Hero1.png);
+  background-size: cover;
+  background-position: center;
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    padding-top: rem(80px);
+    padding-bottom: rem(50px);
+  }
+}
+
+.wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #56ac458d; /* Adjust the opacity as needed */
+  z-index: 1;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  font-weight: 800;
+  font-size: rem(40px);
+  letter-spacing: rem(-1px);
+  padding-left: var(--mantine-spacing-md);
+  padding-right: var(--mantine-spacing-md);
+  color: var(--mantine-color-white);
+  margin-bottom: var(--mantine-spacing-xs);
+  text-align: center;
+  font-family:
+    'Red Hat Display', sans-serif;
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    font-size: rem(28px);
+    text-align: left;
+  }
+}
+
+.highlight {
+  color: #00aae7;
+}
+
+.description {
+  color: var(--mantine-color-gray-0);
+  text-align: center;
+  font-family:
+    'Red Hat Display', sans-serif;
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    font-size: var(--mantine-font-size-md);
+    text-align: left;
+  }
+}
+
+.controls {
+  margin-top: calc(var(--mantine-spacing-sm) * 1.5);
+  display: flex;
+  justify-content: center;
+  padding-left: var(--mantine-spacing-md);
+  padding-right: var(--mantine-spacing-md);
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    flex-direction: column;
+  }
+}
+
+.control {
+  height: rem(42px);
+  font-size: var(--mantine-font-size-md);
+
+  &:not(:first-of-type) {
+    margin-left: var(--mantine-spacing-md);
+  }
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    &:not(:first-of-type) {
+      margin-top: var(--mantine-spacing-md);
+      margin-left: 0;
+    }
+  }
+}
+
+.secondaryControl {
+  color: var(--mantine-color-white);
+  background-color: rgba(255, 255, 255, 0.4);
+
+  @mixin hover {
+    background-color: rgba(255, 255, 255, 0.45);
+  }
+}
