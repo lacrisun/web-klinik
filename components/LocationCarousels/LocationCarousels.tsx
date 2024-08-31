@@ -17,8 +17,8 @@ function Card({ image, title, category }: CardProps) {
         <Paper
             shadow="md"
             p="xl"
-            radius="md"
-            style={{ backgroundImage: `url(${image})` }}
+            radius="lg"
+            style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${image})`}}
             className={classes.card}
         >
             <div>
@@ -30,7 +30,7 @@ function Card({ image, title, category }: CardProps) {
                 </Title>
             </div>
             <Button variant="white" color="dark">
-                Read article
+                Hubungi klinik
             </Button>
         </Paper>
     );
@@ -39,45 +39,34 @@ function Card({ image, title, category }: CardProps) {
 const data = [
     {
         image:
-            'https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-        title: 'Best forests to visit in North America',
-        category: 'nature',
+            '/pekanbaru.png',
+        title: 'Klinik Pratama Primacare Jl. Soebrantas, Pekanbaru',
+        category: 'Pekanbaru',
     },
     {
         image:
-            'https://images.unsplash.com/photo-1559494007-9f5847c49d94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-        title: 'Hawaii beaches review: better than you think',
-        category: 'beach',
+            '/medan.png',
+        title: 'Klinik Pratama Primacare Jl. Multatuli, Medan',
+        category: 'Medan',
     },
     {
         image:
-            'https://images.unsplash.com/photo-1608481337062-4093bf3ed404?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-        title: 'Mountains at night: 12 best locations to enjoy the view',
-        category: 'nature',
+            '/padang.png',
+        title: 'Klinik Pratama Primacare Jl. Andalas, Padang',
+        category: 'Padang',
     },
     {
         image:
-            'https://images.unsplash.com/photo-1507272931001-fc06c17e4f43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-        title: 'Aurora in Norway: when to visit for best experience',
-        category: 'nature',
-    },
-    {
-        image:
-            'https://images.unsplash.com/photo-1510798831971-661eb04b3739?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-        title: 'Best places to visit this winter',
-        category: 'tourism',
-    },
-    {
-        image:
-            'https://images.unsplash.com/photo-1582721478779-0ae163c05a60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-        title: 'Active volcanos reviews: travel at your own risk',
-        category: 'nature',
+            '/batam.png',
+        title: 'Klinik Pratama Primacare Jl. Laksamana Bintan, Batam',
+        category: 'Batam',
     },
 ];
 
 export function CardsCarousel() {
     const theme = useMantineTheme();
     const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
+    const tablet = useMediaQuery(`(max-width: ${theme.breakpoints.md})`)
     const slides = data.map((item) => (
         <Carousel.Slide key={item.title}>
             <Card {...item} />
@@ -85,13 +74,14 @@ export function CardsCarousel() {
     ));
 
     return (
-        <div className={classes.wrapper}>
-            <Container size='md'>
+        <div className={classes.wrapper} id='lokasi'>
+            <Container size='xl'>
                 <Carousel
-                    slideSize={{ base: '100%', sm: '50%' }}
+                    slideSize={{ base: '100%', sm: '50%', md: '33.333333%', lg: '25%' }}
                     slideGap={{ base: rem(2), sm: 'xl' }}
                     align="start"
-                    slidesToScroll={mobile ? 1 : 2}
+                    slidesToScroll={mobile ? 1 : tablet ? 1 : 1}
+                    loop
                 >
                     {slides}
                 </Carousel>
