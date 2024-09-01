@@ -2,7 +2,7 @@
 
 import { Carousel } from '@mantine/carousel';
 import { useMediaQuery } from '@mantine/hooks';
-import { Paper, Text, Title, Button, useMantineTheme, rem, Container } from '@mantine/core';
+import { Paper, Text, Title, Button, useMantineTheme, rem, Container, Center } from '@mantine/core';
 import classes from './CardsCarousel.module.css';
 import '@mantine/carousel/styles.css';
 
@@ -75,6 +75,11 @@ export function CardsCarousel() {
 
     return (
         <div className={classes.wrapper} id='lokasi'>
+            <Container size='md' className={classes.headtitle}>
+                <Center>
+                    Kota Layanan
+                </Center>
+            </Container>
             <Container size='xl'>
                 <Carousel
                     slideSize={{ base: '100%', sm: '50%', md: '33.333333%', lg: '25%' }}

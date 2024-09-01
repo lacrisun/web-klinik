@@ -1,6 +1,6 @@
 "use client"
 
-import { Menu, Group, Center, Burger, Container, Anchor, Drawer } from '@mantine/core';
+import { Menu, Group, Center, Burger, Container, Anchor, Drawer, NavLink } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconChevronDown } from '@tabler/icons-react';
 import { MantineLogo } from '@mantinex/mantine-logo';
@@ -65,20 +65,22 @@ export function HeaderMenu() {
 
   const burgerItems = links.map((link) => {
     const menuItems = link.links?.map((item) => (
-      <Menu.Item key={item.link}>{item.label}</Menu.Item>
+      <NavLink key={item.link} className={classes.link} href={item.link} label={item.label} />
+
     ));
 
     if (menuItems) {
       return (
-        <Menu key={link.label} trigger="hover" transitionProps={{ exitDuration: 0 }} withinPortal>
-          <Menu.Target>
-            <Link href={link.link} className={classes.link}>
-              <span className={classes.linkLabel}>{link.label}</span>
-              <IconChevronDown size="0.9rem" stroke={1.5} />
-            </Link>
-          </Menu.Target>
-          <Menu.Dropdown>{menuItems}</Menu.Dropdown>
-        </Menu>
+        <NavLink
+          key={link.label}
+          href=""
+          label={link.label}
+          rightSection={<IconChevronDown size="1rem" stroke={1.5} />}
+          childrenOffset={28}
+          className={classes.navlink}
+        >
+          {menuItems}
+        </NavLink>
       );
     }
 
@@ -93,7 +95,7 @@ export function HeaderMenu() {
     <header className={classes.header}>
       <Container size="md">
         <div className={classes.inner}>
-          <Image src='/logo.png' alt='logo' width={100} height={100} style={{ marginBottom: 5 }} />
+          <Link href='/'><Image src='/logo.png' alt='logo' width={100} height={100} style={{ marginBottom: 5 }} /></Link>
           <Group gap={5} visibleFrom="sm">
             {items}
           </Group>
