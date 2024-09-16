@@ -14,19 +14,19 @@ const links = [
     link: '#lokasi',
     label: 'Lokasi Layanan',
     links: [
-      { link: '/Pekanbaru', label: 'Pekanbaru' },
-      { link: '/Medan', label: 'Medan' },
-      { link: '/Padang', label: 'Padang' },
-      { link: '/Batam', label: 'Batam' },
+      { link: '/pekanbaru', label: 'Pekanbaru' },
+      { link: '/medan', label: 'Medan' },
+      { link: '/padang', label: 'Padang' },
+      { link: '/batam', label: 'Batam' },
     ],
   },
-  { link: '/testimoni', label: 'Testimoni' },
+  { link: '#testimoni', label: 'Testimoni' },
   { link: '/berita', label: 'Berita' },
   {
-    link: '#2',
+    link: '#support',
     label: 'Support',
     links: [
-      { link: '/faq', label: 'FAQ' },
+      { link: '#faq', label: 'FAQ' },
       { link: '/kontak', label: 'Kontak Kami' },
     ],
   },
@@ -37,7 +37,7 @@ export function HeaderMenu() {
 
   const items = links.map((link) => {
     const menuItems = link.links?.map((item) => (
-      <Menu.Item key={item.link}>{item.label}</Menu.Item>
+      <Link key={item.link} href={item.link}><Menu.Item key={item.link}>{item.label}</Menu.Item></Link>
     ));
 
     if (menuItems) {

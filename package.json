@@ -19,6 +19,11 @@
     "storybook:build": "storybook build"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-brands-svg-icons": "^6.6.0",
+    "@fortawesome/free-regular-svg-icons": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@mantine/carousel": "^7.12.2",
     "@mantine/charts": "^7.12.2",
     "@mantine/code-highlight": "^7.12.2",
@@ -41,7 +46,7 @@
     "@types/testing-library__jest-dom": "^5.14.9",
     "dayjs": "^1.11.13",
     "embla-carousel-react": "^7.1.0",
-    "next": "14.2.4",
+    "next": "^14.2.4",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "recharts": "^2.12.7",

@@ -3,6 +3,7 @@
 import cx from 'clsx';
 import { Title, Text, Container, Button, Overlay } from '@mantine/core';
 import classes from './HeroImageBackground.module.css';
+import Link from 'next/link';
 
 export function HeroImageBackground() {
   return (
@@ -24,9 +25,9 @@ export function HeroImageBackground() {
         </Container>
 
         <div className={classes.controls}>
-          <Button className={classes.control} variant="white" size="lg">
+          <Link href='#lokasi'><Button className={classes.control} variant="white" size="lg">
             Cek Klinik Terdekat
-          </Button>
+          </Button></Link>
         </div>
       </div>
     </div>

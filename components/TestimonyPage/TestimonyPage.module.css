@@ -1,0 +1,25 @@
+.headtitle {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 600;
+    color: #00aae7;
+    margin-top: var(--mantine-spacing-sm);
+    margin-bottom: var(--mantine-spacing-xl);
+    font-size: rem(42px);
+  }
+
+
+  .paper {
+    border-radius: 1rem;
+    border: 1px solid #00aae7;
+    min-height: 300px;
+  }
+
+.gridcol {
+    margin-bottom: 6rem;    
+}
+
+  .papertitle {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 600;
+    color: #56ac45;
+  }
